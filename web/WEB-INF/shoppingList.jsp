@@ -20,8 +20,10 @@
             Add item: <input type="text" name="item"> 
             <input type="hidden" name="action" value="add">
             <input type="submit" value="Add"><br>
-            
-        </form>
+        </form><br>
+        <c:if test="${message == 'nullItem'}">
+            Error: item cannot be empty.
+        </c:if>
         <form method="post" action="ShoppingList">
             <c:forEach var="itemsList" items="${itemsList}">
                 <input type="radio" name="radioButton" value="${itemsList}">${itemsList}<br>
