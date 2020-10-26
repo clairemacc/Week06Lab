@@ -24,5 +24,11 @@
             <input type="radio" name="items" value="${itemsList}">${itemsList}<br>
         </c:forEach>
             
+        <c:if test="${message == 'nullUser'}">
+            <p>Username cannot be null.</p>
+        </c:if>
+        <c:if test="${message == 'logoutSuccess'}">
+            <p>You have successfully logged out.</p>
+        </c:if>
     </body>
 </html>
